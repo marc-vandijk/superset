@@ -65,6 +65,8 @@ services:
     restart: unless-stopped
     ports:
       - 8088:8088
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     depends_on: *superset-depends-on
     volumes: *superset-volumes
 
@@ -96,6 +98,8 @@ services:
     depends_on: *superset-depends-on
     user: "root"
     volumes: *superset-volumes
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     healthcheck:
       test:
         [

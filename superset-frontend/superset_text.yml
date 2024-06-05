@@ -1,0 +1,4 @@
+DB_IMAGES:
+  postgresql: ''
+  bigquery: ''
+  snowflake: ''
